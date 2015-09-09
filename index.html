@@ -1,23 +1,25 @@
 ---
-layout: default
+layout: homepage
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+  
+  <div id="top-headline">
+    <h1>THE CRISIS IS REAL</h1>
+  </div>
+  <div id="intro-text">
+    <p>Nearly 60 million people have beeen forced to flee their homes worldwide. The numbers will rise. Get educated, get involved and take action to help us stop the crisis.</p>
+  </div>
+  <div id="video">
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/138345045" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+  <div id="the-facts">
+    THE FACTS
+  </div>
+  <div id="act">
+    ACT <b>NOW</b>
+  </div>
+  <div id="in-the-news">
+    Refugees in the News
+  </div>
+  

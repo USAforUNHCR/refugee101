@@ -1,0 +1,99 @@
+$title-bold: 'Oswald', sans-serif;
+$body-text: 'Cabin', sans-serif;
+
+#top-headline{
+  position: relative;
+  height: 50vh;
+  background-color: darkblue;
+  font-size: 48pt;
+  color: white;
+  background-color: none;
+  background-image: url(<%= asset_path "../images/syria.jpg" %>);
+  background-attachment: fixed;
+  & h1{
+    font-family: $title-bold;
+    font-weight: 700;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin-right: -50%;
+  }
+}
+
+#intro-text{
+  height: 17vh;
+  color: white;
+  font-size: 28pt;
+  text-align: center;
+  background-color: black;
+  font-family: $body-text;
+  padding: 7%;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  & p{
+    max-width: 970px;
+    margin: auto;
+  }
+}
+
+.video-wrapper{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  & iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#the-facts{
+  height: 55vh;
+  text-align: center;
+  font-family: $title-bold;
+  font-size: 48pt;
+  color: white;
+  background-color: #2ed171;
+  padding-top: 4vh;
+  letter-spacing: 0.3vw;
+}
+
+#act{
+  height: 55vh;
+  text-align: center;
+  font-family: $title-bold;
+  font-size: 48pt;
+  color: white;
+  background-color: black;
+  padding-top: 4vh;
+  letter-spacing: 0.2vw;
+}
+
+#in-the-news{
+  height: 55vh;
+  text-align: center;
+  font-family: $title-bold;
+  font-size: 48pt;
+  color: white;
+  background-color: #28d2ed;
+  padding-top: 4vh;
+  letter-spacing: 0.2vw;
+}
+
+.wrapper{
+  width: 100%;
+  margin: none;
+}
+
+.page-content{
+  padding: none;
+}
+
+.site-footer{
+  background-color: black;
+  border: black;
+}
