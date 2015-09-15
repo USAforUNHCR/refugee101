@@ -1,6 +1,11 @@
 $title-bold: 'Oswald', sans-serif;
 $body-text: 'Cabin', sans-serif;
 
+// breakpoints
+$large: 1200px;
+$tablet: 900px;
+$phone:  540px;
+
 #top-headline{
   position: relative;
   height: 50vh;
@@ -11,6 +16,7 @@ $body-text: 'Cabin', sans-serif;
   background-image: url(<%= asset_path "../images/syria.jpg" %>);
   background-attachment: fixed;
   & h1{
+    padding: 5%;
     font-family: $title-bold;
     font-weight: 700;
     position:absolute;
@@ -19,21 +25,36 @@ $body-text: 'Cabin', sans-serif;
     transform: translate(-50%,-50%);
     margin-right: -50%;
   }
+  @media screen and (max-width: $large){
+    font-size: 36pt;
+  }
+  @media screen and (max-width: $tablet){
+    font-size: 32pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 26pt;
+  }
 }
 
 #intro-text{
-  height: 17vh;
+  // height: 17vh;
   color: white;
   font-size: 28pt;
   text-align: center;
   background-color: black;
   font-family: $body-text;
-  padding: 7%;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding: 7% 10vw 7% 10vw;
+  // padding-left: 10vw;
+  // padding-right: 10vw;
   & p{
     max-width: 970px;
     margin: auto;
+  }
+  @media screen and (max-width: $tablet){
+    font-size: 20pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 14pt;
   }
 }
 
@@ -60,6 +81,12 @@ $body-text: 'Cabin', sans-serif;
   background-color: #2ed171;
   padding-top: 4vh;
   letter-spacing: 0.3vw;
+  @media screen and (max-width: $tablet){
+    font-size: 38pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 28pt;
+  }
 }
 
 #act{
@@ -71,6 +98,12 @@ $body-text: 'Cabin', sans-serif;
   background-color: black;
   padding-top: 4vh;
   letter-spacing: 0.2vw;
+  @media screen and (max-width: $tablet){
+    font-size: 38pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 28pt;
+  }
 }
 
 #in-the-news{
@@ -82,6 +115,12 @@ $body-text: 'Cabin', sans-serif;
   background-color: #28d2ed;
   padding-top: 4vh;
   letter-spacing: 0.2vw;
+  @media screen and (max-width: $tablet){
+    font-size: 36pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 26pt;
+  }
 }
 
 .wrapper{
