@@ -14,3 +14,12 @@ github_username:  jekyll
 markdown: kramdown
 
 exclude: [vendor,'Gemfile','Gemfile.lock','Readme.md']
+
+#Assets Pipeline
+assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/fonts
+    - _assets
