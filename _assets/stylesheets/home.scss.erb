@@ -117,11 +117,11 @@ ul.bxslider{
 
 
 #act{
-  // height: 55vh;
   text-align: center;
   font-family: $title-bold;
   font-size: 48pt;
   color: white;
+  margin: 0 auto;
   background-color: black;
   padding-top: 4vh;
   letter-spacing: 0.2vw;
@@ -136,38 +136,83 @@ ul.bxslider{
 
 .petition-head{
   padding: 2vh 0 2vh 0;
-  font-size: 20pt;
+  font-size: 28pt;
   margin: auto;
   width: 80%;
-  background-color: #ffa445;
-  border-radius: 20px 20px 0px 0px;
+  background-color: #eacd27;
+  border-radius: 40px 5px 40px 5px;
 }
 
-.petition-body{
-  margin: auto;
+.petition-right{
+  display: inline-block;
   margin-top: -3%;
   font-size: 16pt;
-  width: 80%;
-  padding: 7% 5% 8% 5%;
-  border: solid 3px #ffa445;
-  border-radius: 10px;
+  width: 50%;
+  margin-left: 0;
+  padding: 6vh 10vw 4vh 2vw;
+  border-left: solid 3px #eacd27;
   box-sizing: border-box;
 }
 
-.petition-lower{
+.petition-left{
   font-size: 16pt;
+  float: left;
   margin: auto;
-  width: 80%;
+  width: 50%;
   box-sizing: border-box;
-  padding: 4vh 8vw 4vh 8vw;
-  background-color: #a5a5a5;
-  margin-top: -5%;
-  color: black;
+  padding: 3vh 2vw 0vh 10vw;
+  color: white;
   border-radius: 0 0 20px 20px;
-  border-top: 2px solid #d0cfce;
+}
+
+form{
+  padding-top: 4vh;
+  padding-bottom: 6vh;
+  // margin-top: -3vh;
+  clear: both;
+  margin: auto;
+  font-size: 16pt;
+  width: 70%;
+  text-align: center;
+  border-top: solid 3px #eacd27;
+  border-left: solid 3px #eacd27;
+  border-right: solid 3px #eacd27;
+  & img{
+    opacity: 0.0;
+    transform: scale(0.1);
+    transform: translate(0, 5vh);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+label{
+  margin-left: 1vw;
+  vertical-align: middle;
+}
+
+input[type="submit"]{
+  margin-left: 2vw;
+  padding: 1%;
+  font-size: 18pt;
+  background-color: #eacd27;
+  border: solid 1px #eacd27;
+  font-family: $body-text;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+input[type="submit"]:hover{
+    transform: scale(1.05);
+    // color: #208e4c;
+    text-decoration: none;
+  }
+input[type="submit"]:hover + img{
+  transform: scale(1.0);
+  transform: translate(0,0);
+  opacity: 1;
 }
 
 #in-the-news{
+  clear: both;
   height: 55vh;
   text-align: center;
   font-family: $title-bold;
