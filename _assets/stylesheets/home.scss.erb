@@ -104,8 +104,8 @@ $phone:  540px;
 }
 
 .banner-wrapper{
-  padding-top: 4vh;
-  max-width: 1080px;
+  padding-top: 2vh;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -141,17 +141,33 @@ ul.bxslider{
   width: 80%;
   background-color: #eacd27;
   border-radius: 40px 5px 40px 5px;
+
+  @media screen and (max-width: $phone){
+  font-size: 20pt;
+  padding: 2vh 6vw 2vh 6vw;
+  }
 }
 
 .petition-right{
   display: inline-block;
-  margin-top: -3%;
   font-size: 16pt;
   width: 50%;
   margin-left: 0;
-  padding: 6vh 10vw 4vh 2vw;
+  padding: 3vh 10vw 4vh 2vw;
   border-left: solid 3px #eacd27;
+
+  z-index: 10;
   box-sizing: border-box;
+  @media screen and (max-width: $tablet){
+    font-size: 14pt;
+  }
+  @media screen and (max-width: $phone){
+    border-top: solid 3px #eacd27;
+    border-bottom: solid 3px #eacd27;
+    border-left: none;
+    width: 100%;
+    padding: 4%;
+  }
 }
 
 .petition-left{
@@ -163,53 +179,102 @@ ul.bxslider{
   padding: 3vh 2vw 0vh 10vw;
   color: white;
   border-radius: 0 0 20px 20px;
+  @media screen and (max-width: $tablet){
+    font-size: 14pt;
+  }
+  @media screen and (max-width: $phone){
+    float: none;
+    width: 100%;
+    padding: 4%;
+  }
 }
 
 form{
   padding-top: 4vh;
   padding-bottom: 6vh;
-  // margin-top: -3vh;
   clear: both;
   margin: auto;
   font-size: 16pt;
   width: 70%;
+  max-width: 700px;
   text-align: center;
   border-top: solid 3px #eacd27;
   border-left: solid 3px #eacd27;
   border-right: solid 3px #eacd27;
   & img{
+    display: inline-block;
+    position: relative;
     opacity: 0.0;
-    transform: scale(0.1);
-    transform: translate(0, 5vh);
+    transform: scale(0.5);
+    transform: translate(-4vw, 5vh);
     transition: all 0.3s ease-in-out;
+    // z-index: -10;
+  }
+  @media screen and (max-width: $tablet){
+    font-size: 14pt;
+  }
+  @media screen and (max-width: $phone){
+    border: none;
   }
 }
 
 label{
+  display: inline-block;
+  margin-right: 1vw;
   margin-left: 1vw;
+  width: 28%;
   vertical-align: middle;
+  text-align: right;
+  @media screen and (max-width: $phone){
+    width: 20%;
+    margin-left: 0;
+  }
+}
+
+input{
+  display: inline-block;
+  width: 24%;
+  text-align: left;
+  margin-right: 22%;
+  
 }
 
 input[type="submit"]{
-  margin-left: 2vw;
-  padding: 1%;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 2vw;
+  margin-top: 3vh;
+  width: 214px;
+  padding: 2% ;
   font-size: 18pt;
   background-color: #eacd27;
-  border: solid 1px #eacd27;
+  border: none;
   font-family: $body-text;
   color: white;
   transition: all .2s ease-in-out;
+  @media screen and (max-width: $tablet){
+    font-size: 14pt;
+    width: 180px;
+  }
+   @media screen and (max-width: $phone){
+    font-size: 12pt;
+    width: 140px;
+    margin-left: 11vw;
+  }
 }
+
 input[type="submit"]:hover{
-    transform: scale(1.05);
-    // color: #208e4c;
+    background: none;
+    border: none;
     text-decoration: none;
   }
 input[type="submit"]:hover + img{
-  transform: scale(1.0);
-  transform: translate(0,0);
+  transform: translate(-4vw,0vh);
   opacity: 1;
 }
+
+
 
 #in-the-news{
   clear: both;
