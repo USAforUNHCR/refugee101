@@ -274,26 +274,6 @@ input[type="submit"]:hover + img{
   opacity: 1;
 }
 
-
-
-#in-the-news{
-  clear: both;
-  height: 55vh;
-  text-align: center;
-  font-family: $title-bold;
-  font-size: 48pt;
-  color: white;
-  background-color: #28d2ed;
-  padding: 4vh 8vw 4vh 8vw;
-  letter-spacing: 0.2vw;
-  @media screen and (max-width: $tablet){
-    font-size: 36pt;
-  }
-  @media screen and (max-width: $phone){
-    font-size: 26pt;
-  }
-}
-
 .wrapper{
   width: 100%;
   margin: none;
@@ -304,6 +284,31 @@ input[type="submit"]:hover + img{
 }
 
 .site-footer{
-  background-color: black;
+  background-color: white;
   border: black;
+}
+
+.site-footer{
+  & a{
+    font-size: 16pt;
+    margin-right: 2vw;
+    padding-top: 20vh;
+    &:hover{
+      text-decoration: none;
+      cursor: hand;}
+    }
+    @media screen and(max-width: $tablet){
+      font-size: 14pt;
+    }
+}
+
+.footer-col-1{
+  & img{
+    padding: 2%;
+    width: 30%;
+  }
+  & span{
+    width:100%;
+    text-align: left;
+  }
 }
