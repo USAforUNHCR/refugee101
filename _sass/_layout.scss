@@ -123,6 +123,7 @@
 .footer-col-1 {
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
     width:         calc(35% - (#{$spacing-unit} / 2));
+    padding-left: 2vw;
 }
 
 .footer-col-2 {
@@ -142,6 +143,7 @@
     float: right;
     white-space: nowrap;
     padding-top: 1vh;
+    vertical-align: middle;
 }
 
 @include media-query($on-laptop) {

@@ -10,7 +10,7 @@ $phone:  540px;
   position: relative;
   height: 50vh;
   background-color: darkblue;
-  font-size: 48pt;
+  font-size: 28pt;
   color: white;
   background-color: none;
   background-image: url(<%= asset_path "../images/syria.jpg" %>);
@@ -26,18 +26,17 @@ $phone:  540px;
     margin-right: -50%;
   }
   @media screen and (max-width: $large){
-    font-size: 36pt;
+    font-size: 26pt;
   }
   @media screen and (max-width: $tablet){
-    font-size: 32pt;
+    font-size: 24pt;
   }
   @media screen and (max-width: $phone){
-    font-size: 26pt;
+    font-size: 22pt;
   }
 }
 
 #intro-text{
-  // height: 17vh;
   color: white;
   font-size: 28pt;
   text-align: center;
@@ -59,8 +58,8 @@ $phone:  540px;
 }
 
 #video{
-  padding-bottom: 4vh;
-  background-color: black;
+  padding: 8vh 0 2vh 0;
+  background-color: #928887;
 }
 
 .video-wrapper{
@@ -69,13 +68,64 @@ $phone:  540px;
   padding-top: 25px;
   height: 0;
   & iframe{
+    margin: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    margin-left: -40%;
   }
 }
+
+.video-wrapper + .share-social{
+    top: -5vh;
+  }
+
+.share-text{
+  font-family: $title-bold;
+  text-align: center;
+  color: #f9e4e3;
+  font-size: 24pt;
+  margin-top: -8%;
+}
+
+.share-social {
+  position: relative;
+  font-size: 34pt;
+  margin: auto;
+  text-align: center;
+  width: 40%;
+  & a{
+    padding: 3% 2% 0 2%;
+    box-sizing: border-box;
+    color: #DDDDDD;
+    &:visited{
+      color: #DDDDDD;
+    }  
+    &:hover{
+      text-shadow: 0px 2px 2px #3d67ba; color: #444444;
+      text-decoration: none;
+    }  
+  }
+  @media screen and (max-width: $tablet){
+    font-size: 40pt;
+    top: -2vh;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 32pt;
+    top: 0;
+  }
+}
+
+.twitter{
+  background-color: #5ea9dd;
+}
+
+.facebook{
+  background-color: #3b5998;
+}
+
+
 
 #the-facts{
   // height: 55vh;
@@ -84,7 +134,7 @@ $phone:  540px;
   font-size: 48pt;
   color: white;
   background-color: #2ed171;
-  padding: 5vh 2vw 7vh 2vw;
+  padding: 5vh 2vw 3vh 2vw;
   letter-spacing: 0.3vw;
   @media screen and (max-width: $tablet){
     font-size: 38pt;
@@ -101,7 +151,27 @@ $phone:  540px;
     color: #208e4c;
     text-decoration: none;
   }
+  & .share-social a{
+    transform: none;
+    padding: 1% 2% 0 2%;
+    box-sizing: border-box;
+    color: #DDDDDD;
+    &:visited{
+      color: #DDDDDD;
+    }  
+    &:hover{
+      text-shadow: 0px 2px 2px #3d67ba; color: #444444;
+      text-decoration: none;
+    }  
+  }
 }
+
+#img-share-text{
+  letter-spacing: 0;
+  font-size: 22pt;
+  margin-bottom: 1%;
+}
+
 
 .banner-wrapper{
   padding-top: 2vh;
@@ -242,7 +312,7 @@ input{
 input[type="submit"]{
   display: inline-block;
   text-align: center;
-  margin-left: 10%;
+  margin-left: 14%;
   margin-right: 2vw;
   margin-top: 3vh;
   width: 214px;

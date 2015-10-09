@@ -3,7 +3,7 @@ layout: homepage
 ---
   
   <div id="top-headline">
-    <h1>THE CRISIS IS REAL</h1>
+    <h1>THE REFUGEE CRISIS IS REAL</h1>
   </div>
   <div id="intro-text">
     <p>Nearly 60 million people have beeen forced to flee their homes worldwide. The numbers will rise. Get educated, get involved and take action to help us stop the crisis.</p>
@@ -12,11 +12,17 @@ layout: homepage
     <div class="video-wrapper">
       <iframe src="https://player.vimeo.com/video/138345045" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
+    <p class="share-text">
+      Share this video
+    </p>
+    <p class="share-social"> 
+      <a href="google.com" data-icon="e" class="twitter"></a><a href="google.com" data-icon="d" class="facebook"></a>
+    </p>
   </div>
   <div id="the-facts">
     
     <a href="#" class="prev-slide" data-icon="a"></a>
-      THE FACTS
+      KNOW YOUR STUFF
     <a href="#" class="next-slide" data-icon="b"></a>
     <div class="banner-wrapper">
       <ul class="bxslider">
@@ -27,6 +33,12 @@ layout: homepage
         <li>{% image infographic5.jpg %}</li>
       </ul>   
     </div>
+    <p id="img-share-text">
+      Share this image
+    </p>
+    <p class="share-social">
+      <a href="google.com" data-icon="e" class="twitter"></a><a href="google.com" data-icon="d" class="facebook"></a>
+    </p>
   
   </div>
   <div id="act">
@@ -44,10 +56,12 @@ layout: homepage
     </div>
 
     <form id="petition">
-      <label>name</label>
+      <label>name*</label>
       <input type="text" required>
-      <label>email</label>
+      <label>email*</label>
       <input type="email" required>
+      <label>zip&nbsp</label>
+      <input type="zip">
       <input type="submit" value="Raise Your Hand!">
       {% image hand.svg %}
     </form>
