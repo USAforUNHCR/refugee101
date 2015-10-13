@@ -1,14 +1,9 @@
 # Site settings
-title: Refugee 101
+title: Forced to Flee
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: Forced to flee. The refugee crisis is real. Nearly 60 million people have beeen forced to flee their homes worldwide. The numbers will rise. Get educated get involved and take action to help us stop the crisis.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://forcedtoflee.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
