@@ -74,6 +74,12 @@ $phone:  540px;
     width: 80%;
     height: 80%;
     margin-left: -40%;
+    @media screen and (max-width: $phone){
+      width:100%;
+      height: 100%;
+      margin-left: 0;
+      left: 0;
+    }
   }
 }
 
@@ -87,6 +93,11 @@ $phone:  540px;
   color: #f9e4e3;
   font-size: 24pt;
   margin-top: -8%;
+  @media screen and (max-width: $phone){
+    margin-bottom: 0;
+    margin-top: 12%;
+    font-size: 14pt;
+  }
 }
 
 .share-social {
@@ -176,10 +187,13 @@ $phone:  540px;
 
 #img-share-text{
   letter-spacing: 0;
-  font-size: 22pt;
+  font-size: 24pt;
+  margin-top: 2%;
   margin-bottom: 1%;
-  @media screen and (max-width: $tablet){
-    // margin-bottom: 3%;
+  @media screen and (max-width: $phone){
+    margin-top: 6%;
+    font-size: 14pt;
+    margin-bottom: 0;
   }
 }
 
@@ -317,7 +331,9 @@ input{
   width: 24%;
   text-align: left;
   margin-right: 22%;
-  
+  @media screen and (max-width: $phone){
+    width: 40%;
+  }
 }
 
 input[type="submit"]{
@@ -355,6 +371,25 @@ input[type="submit"]:hover + img{
   opacity: 1;
 }
 
+#conf-message{
+  font-size: 16pt;
+  display: none;
+  padding: 4vh 3vw 4vh 3vw;
+  width: 50%;
+  margin: auto;
+  border: solid 3px #eacd27;
+  border-bottom: none;
+
+  @media screen and (max-width: $tablet){
+    font-size: 14pt;
+    border: none;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 12pt;
+    border: none;
+  }
+}
+
 .attrib{
   font-size: 6pt;
   padding: 0;
@@ -383,8 +418,8 @@ input[type="submit"]:hover + img{
       text-decoration: none;
       cursor: hand;}
     }
-    @media screen and(max-width: $tablet){
-      font-size: 14pt;
+    @media screen and (max-width: $tablet){
+      font-size: 12pt;
     }
 }
 

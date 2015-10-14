@@ -1,0 +1,53 @@
+// breakpoints
+$large: 1200px;
+$tablet: 900px;
+$phone:  540px;
+
+h1{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 44pt;
+  padding: 3vh 0 3vh 0;
+}
+
+.thanks-content{
+  background-color: #2ED171;
+  padding: 8vh 0 8vh 0;
+  height: 50vh;
+}
+
+p{
+  text-align: center;
+  color: white;
+  font-size: 24pt;
+}
+
+.site-footer{
+  background-color: white;
+  border: black;
+}
+
+.site-footer{
+  & a{
+    font-size: 16pt;
+    margin-right: 2vw;
+    padding-top: 20vh;
+    &:hover{
+      text-decoration: none;
+      cursor: hand;}
+    }
+    @media screen and (max-width: $tablet){
+      font-size: 12pt;
+    }
+}
+
+.footer-col-1{
+  & img{
+    padding: 2%;
+    width: 30%;
+  }
+  & span{
+    width:100%;
+    text-align: left;
+  }
+}

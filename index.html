@@ -6,7 +6,7 @@ layout: homepage
     <h1>THE REFUGEE CRISIS IS REAL</h1>
   </div>
   <div id="intro-text">
-    <p>Nearly 60 million people have beeen forced to flee their homes worldwide. The numbers will rise. Get educated, get involved and take action to help us stop the crisis.</p>
+    <p>Nearly 60 million people have beeen forced to flee their homes worldwide. The numbers will increase. Get educated, get involved and take action to help us stop the crisis.</p>
   </div>
   <div id="video" name="video">
     <div class="video-wrapper">
@@ -16,7 +16,7 @@ layout: homepage
       Share this
     </p>
     <p class="share-social"> 
-      <a href="https://twitter.com/home?status=Refugee%20101%20Video%20https%3A//vimeo.com/138345045" target="blank" data-icon="e" class="twitter"></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//vimeo.com/138345045" data-icon="d" class="facebook"></a>
+      <a href="https://twitter.com/home?status=Refugee%20101%20Video%20https%3A//vimeo.com/138345045" target="_blank" data-icon="e" class="twitter"></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//vimeo.com/138345045" data-icon="d" target="_blank" class="facebook"></a>
     </p>
   </div>
   <div id="the-facts" name="know-your-stuff">
@@ -38,14 +38,14 @@ layout: homepage
       Share this
     </p>
     <p class="share-social">
-      <a href="google.com" data-icon="e" class="twitter"></a><a href="google.com" data-icon="d" class="facebook"></a>
+      <a href="https://twitter.com/home?status=The%20refugee%20crisis%20is%20real,%20here%20are%20the%20facts%3A%20http%3A//forcedtoflee.com" data-icon="e" class="twitter" target="_blank"></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//forcedtoflee.com" target="_blank" data-icon="d" class="facebook"></a>
     </p>
   
   </div>
   <div id="act">
     ACT <b>NOW</b>
     <div class="petition-head">
-      Raise your hand for Refugees.
+      Raise your hand for refugees.
     </div>
     <div class="petition-left">
         The refugee crisis is real and it’s not going way. New threats like climate change and gang violence will only increase the already staggering numbers.  The complexities of the issue make it hard to know how you can make a difference – but you can.
@@ -58,15 +58,16 @@ layout: homepage
 
     <form id="petition">
       <label>name*</label>
-      <input type="text" required>
+      <input type="text" name="NAME" required>
       <label>email*</label>
-      <input type="email" required>
+      <input type="email" name="EMAIL" required>
       <label>zip&nbsp</label>
-      <input type="zip">
-      <input type="submit" value="Raise Your Hand!">
+      <input type="zip" name="ZIP">
+      <input type="submit" value="Raise Your Hand!" class="submit-button">
       {% image hand.svg %}
     </form>
-    <span class="attrib">
+    <p id="conf-message"></p>
+    <p class="attrib">
       Hand by PJ Witsakorn from the Noun Project
-    </span>
+    </p>
   </div>  

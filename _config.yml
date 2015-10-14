@@ -5,6 +5,8 @@ description: Forced to flee. The refugee crisis is real. Nearly 60 million peopl
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://forcedtoflee.com" # the base hostname & protocol for your site
 
+permalink: pretty
+
 # Build settings
 markdown: kramdown
 
