@@ -6,6 +6,15 @@ $large: 1200px;
 $tablet: 900px;
 $phone:  540px;
 
+body > img{
+  display: none;
+}
+
+h1{
+      font-family: $title-bold;
+      font-weight: 700;
+  }
+
 #top-headline{
   position: relative;
   height: 50vh;
@@ -15,7 +24,7 @@ $phone:  540px;
   background-color: none;
   background-image: url(<%= asset_path "../images/syria.jpg" %>);
   background-attachment: fixed;
-  & h1{
+  & .headline-text{
     padding: 5%;
     font-family: $title-bold;
     font-weight: 700;
@@ -287,7 +296,7 @@ ul.bxslider{
   }
 }
 
-form{
+#petition{
   padding-top: 4vh;
   padding-bottom: 6vh;
   clear: both;
@@ -314,9 +323,9 @@ form{
   @media screen and (max-width: $phone){
     border: none;
   }
-}
 
-label{
+
+& label{
   display: inline-block;
   margin-right: 1vw;
   margin-left: 1vw;
@@ -329,7 +338,7 @@ label{
   }
 }
 
-input{
+& input{
   display: inline-block;
   width: 24%;
   text-align: left;
@@ -339,7 +348,7 @@ input{
   }
 }
 
-input[type="submit"]{
+& input[type="submit"]{
   display: inline-block;
   text-align: center;
   margin-left: 14%;
@@ -364,14 +373,15 @@ input[type="submit"]{
   }
 }
 
-input[type="submit"]:hover{
+& input[type="submit"]:hover{
     background: none;
     border: none;
     text-decoration: none;
   }
-input[type="submit"]:hover + img{
+& input[type="submit"]:hover + img{
   transform: translate(-4vw,0vh);
   opacity: 1;
+}
 }
 
 #conf-message{

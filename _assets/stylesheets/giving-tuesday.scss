@@ -1,0 +1,117 @@
+$title-bold: 'Oswald', sans-serif;
+$body-text: 'Cabin', sans-serif;
+
+// breakpoints
+$large: 1200px;
+$tablet: 900px;
+$phone:  540px;
+
+.intro-text{
+  color: black;
+  font-size: 22pt;
+  text-align: left;
+  font-family: $body-text;
+  padding: 3% 10vw 2% 10vw;
+  // padding-left: 10vw;
+  
+  & p{
+    max-width: 970px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: $tablet){
+    font-size: 16pt;
+  }
+  @media screen and (max-width: $phone){
+    font-size: 14pt;
+  }
+}
+
+.signup-text{
+  text-align: left;
+  margin: auto;
+  width: 60%;
+  max-width: 750px;
+  border-radius: 5px;
+  font-size: 18pt;
+  @media screen and (max-width: $tablet){
+    margin: auto;
+    width: 70%;
+  }
+}
+
+.thanks-text{
+  display: none;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.signup-div{
+  margin: auto;
+  margin-bottom: 5%;
+  max-width: 1000px;
+}
+
+.tuesday-form{
+  font-size: 18pt;
+  font-family: $body-text;
+  vertical-align: top;
+  margin-top: 25px;
+  width:50%;
+  margin: auto;
+  top: 0px;
+  @media screen and (max-width: $tablet){
+    font-size: 16pt;
+    width: 70%;
+    & label{
+      width: 75%;
+    }
+  }
+  & label{
+    width: 30%;
+    text-align: right;
+    display: inline-block;
+    @media screen and (max-width: $phone){
+      margin: auto;
+      width: 80%;
+      display: block;
+      text-align: center;
+    }
+  }
+  & input{
+    width: 40%;
+    margin-left: 10px;
+    @media screen and (max-width: $phone){
+      width: 100%;
+      margin: auto;
+      text-align: center;
+  }
+}
+  & #tuesday-submit{
+      font-size: 20pt;
+      display: block;
+      color: white;
+      margin: auto;
+      margin-top: 10px;
+      padding: 5px;
+      background-color: blue;
+      width: 30%;
+      border: solid 2px blue;
+      border-radius: 4px;
+      transition: all .2s ease-in-out;
+      &:hover{
+        color: blue;
+        background: white;
+      }
+      @media screen and (max-width: $tablet){
+        font-size: 14pt;
+        width: 40%;
+      }
+    }
+
+  & .asterix{
+    color: red;
+  }
+}
+
