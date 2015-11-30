@@ -28,14 +28,15 @@ $phone:  540px;
 }
 
 .signup-text{
-  text-align: left;
+  text-align: center;
   margin: auto;
-  width: 60%;
-  max-width: 750px;
+  width: 100%;
+  max-width: 970px;
   border-radius: 5px;
   font-size: 18pt;
   @media screen and (max-width: $tablet){
     margin: auto;
+    font-size: 14pt;
     width: 70%;
   }
 }
@@ -58,7 +59,7 @@ $phone:  540px;
   font-family: $body-text;
   vertical-align: top;
   margin-top: 25px;
-  width:50%;
+  width:100%;
   margin: auto;
   top: 0px;
   @media screen and (max-width: $tablet){
@@ -94,6 +95,7 @@ $phone:  540px;
       color: white;
       margin: auto;
       margin-top: 10px;
+      margin-bottom: 20px;
       padding: 5px;
       background-color: blue;
       width: 30%;
