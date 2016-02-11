@@ -59,17 +59,44 @@ layout: homepage
     </div>
 
     <form id="petition">
-      <label>name*</label>
-      <input type="text" name="NAME" required>
-      <label>email*</label>
-      <input type="email" name="EMAIL" required>
-      <label>zip&nbsp</label>
-      <input type="zip" name="ZIP">
-      <input type="submit" value="Raise Your Hand!" class="submit-button">
-      {% image hand.svg %}
+      <div class="form-group">
+        <label>name*</label>
+        <input type="text" name="NAME" required>
+      </div>
+      <div class="form-group">
+        <label>email*</label>
+        <input type="email" name="EMAIL" required>
+      </div>
+      <div class="form-group">
+        <label>zip&nbsp</label>
+        <input type="zip" name="ZIP">
+      </div>
+      <input type="submit" value="Submit" class="submit-button">
     </form>
     <p id="conf-message"></p>
-    <p class="attrib">
-      Hand by PJ Witsakorn from the Noun Project
-    </p>
-  </div>  
+  </div>
+
+  <div id="modal" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3 class="modal-title">Want to learn more? Sign up below:</h3>
+          <form class="modal-signup">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" required id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" placeholder="Email address">
+            </div>
+            <div class="form-group">
+              <button id="signup-submit">Learn More!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>

@@ -16,41 +16,44 @@ h1{
   }
 
 #top-headline{
+  text-align: center;
   position: relative;
-  height: 50vh;
+  height: 20vh;
   background-color: darkblue;
-  font-size: 28pt;
   color: white;
   background-color: none;
   background-image: url(<%= asset_path "../images/syria.jpg" %>);
   background-attachment: fixed;
-  & .headline-text{
+  & h1{
+    font-size: 34pt;
     padding: 5%;
     font-family: $title-bold;
     font-weight: 700;
     position:absolute;
     top:50%;
     left:50%;
-    -webkit-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%); 
-    margin-right: -50%;
+    -webkit-transform:translate(-50%,-60%);
+    transform:translate(-50%,-60%); 
+    margin-right: -60%;
+
+    @media screen and (max-width: $large){
+      font-size: 26pt;
+    }
+    @media screen and (max-width: $tablet){
+      font-size: 24pt;
+    }
+    @media screen and (max-width: $phone){
+      font-size: 22pt;
+    }
   }
-  @media screen and (max-width: $large){
-    font-size: 26pt;
-  }
-  @media screen and (max-width: $tablet){
-    font-size: 24pt;
-  }
-  @media screen and (max-width: $phone){
-    font-size: 22pt;
-  }
+ 
 }
 
 #intro-text{
-  color: white;
+  color: black;
   font-size: 28pt;
   text-align: center;
-  background-color: black;
+  background-color: white;
   font-family: $body-text;
   padding: 7% 10vw 7% 10vw;
   // padding-left: 10vw;
@@ -68,8 +71,7 @@ h1{
 }
 
 #video{
-  padding: 8vh 0 2vh 0;
-  background-color: #928887;
+  background-color: black;
 }
 
 .video-wrapper{
@@ -211,7 +213,7 @@ h1{
 
 
 .banner-wrapper{
-  padding-top: 2vh;
+  // padding-top: 2vh;
   max-width: 800px;
   margin: auto;
 }
@@ -339,6 +341,7 @@ ul.bxslider{
 }
 
 & input{
+  color: black;
   display: inline-block;
   width: 24%;
   text-align: left;
@@ -351,8 +354,9 @@ ul.bxslider{
 & input[type="submit"]{
   display: inline-block;
   text-align: center;
-  margin-left: 14%;
-  margin-right: 2vw;
+  // margin-left: 14%;
+  // margin-right: 2vw;
+  margin: auto;
   margin-top: 3vh;
   width: 214px;
   padding: 2% ;
@@ -426,7 +430,6 @@ ul.bxslider{
   & a{
     font-size: 16pt;
     margin-right: 2vw;
-    padding-top: 20vh;
     &:hover{
       text-decoration: none;
       cursor: hand;}
@@ -446,3 +449,46 @@ ul.bxslider{
     text-align: left;
   }
 }
+
+.modal-content{
+  text-align: center;
+  padding: 1em 1em 3em 1em;
+}
+
+.modal-title{
+  padding-bottom: 0.5em;
+}
+.modal-signup{
+  border: 1px solid grey;
+  background-color: lighten(grey, 40%);
+  border-radius: 0.3em;
+  width: 80%;
+  padding: 1em;
+  margin: auto;
+  & .form-group{
+    padding: 0.5em;
+    & label{
+      margin: auto;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+    & input{
+      margin: auto;
+      width: 80%;
+    }
+  }
+
+}
+
+#signup-submit{
+      background-color: white;
+      padding: 0.8em;
+      border: solid grey 2px;
+      font-weight: 400;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: grey;
+        color: white;
+        font-weight: 700;
+      }
+    }

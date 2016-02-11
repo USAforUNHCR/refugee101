@@ -1,7 +1,7 @@
 'user-strict'
 
-$(document).ready(function(){
-  
+$(document).ready(function() {
+
   slider = $('.bxslider').bxSlider({
     adaptiveHeight: true,
     pager: false,
@@ -10,58 +10,84 @@ $(document).ready(function(){
 
   nextListener(slider);
   prevListener(slider);
-  submitEventListener();
+  modalListener();
+  formListener();
+  launchModal();
 
-  
-})
+});
 
-function nextListener(slider){
-  $('.next-slide').click(function(event){
+function nextListener(slider) {
+  $('.next-slide').click(function(event) {
     event.preventDefault();
     console.log(slider);
     slider.goToNextSlide();
   });
 }
 
-function prevListener(slider){
-  $('.prev-slide').click(function(event){
+function prevListener(slider) {
+  $('.prev-slide').click(function(event) {
     event.preventDefault();
     slider.goToPrevSlide();
   });
 }
 
-function submitEventListener(){
-  $form = $("#petition");
+var gw = new Groundwork ({
+    'api_url': 'https://api.thegroundwork.com',
+    'oauth_client_id': 'pub-un-test.vice--HoIQWQkqB5ZD1LHL95dwF5PhmRVoBAG79su2sQIZcCCqXn0OKm0X9n4h7cVNaG1ZjVyweMJr0_g5U512d2iXPQ'
+  });
 
-  $form.submit(function(event){
-    console.log(event);
+function sendData(data) {
+  data.tags || (data.tags = {});
+  data.tags.send_email = 0;
+  gw.supporters.create(data)
+  .then(function(res){
+    console.log(res);
+  })
+  .catch(function(res){
+    console.log(res);
+  });
+};
+
+function modalListener() {
+  $('#signup-submit').click(function(event) {
     event.preventDefault();
-    $('.submit-button').val('Please Wait...').prop('disabled',true);
+    var form = $('.modal-signup');
+    var data = splitNames(form.find('#name').val());
+    data.email = form.find('#email').val();
+    data.source = "vice modal";
+    sendData(data);
+    $('#modal').modal('hide');
+  })
+  
+}
 
-    $.ajax({
-      type: 'POST',
-      url: '//nyc.us11.list-manage.com/subscribe/post-json?u=7aa897cfc40f7cfbb83ffadd4&amp;id=c8e53459bc&c=?',
-      data: $form.serialize(),
-      timeout: 5000,
-      cache: false,
-      dataType: 'jsonp',
-      contentType: "application/json; charset=utf-8",
-      error: function(err) {console.log("Error.")},
-      success: function(data){
-        if (data.result != "success") {
-          $('.submit-button').val('Please Wait...').prop('disabled',true);
-          $('#conf-message').html('').slideUp(700);
-          $('#conf-message').html("Something went wrong, please try to submit your details again.").slideDown(700, function(){
-            $('.submit-button').val('Raise Your Hand!').prop('disabled',false);
-          });
-        }
-        else {
-          $('#petition').slideUp(700, function(){
-            $('#conf-message').html("Thanks! We sent you an email. Please confirm your email address to raise your hand for refugees.").slideDown(700);
-          });
-          
-        }
-      }
-    });
+function splitNames(name){
+  var nameArr = name.split(" ");
+  var givenName = nameArr[0];
+  var familyName = "";
+  for (var i = 1; i< nameArr.length; i++) {
+    familyName = familyName + " " + nameArr[i];
+  }
+  return {
+    familyName: familyName,
+    givenName: givenName
+  };
+}
+
+function launchModal() {
+  $('#modal').modal('show');
+}
+
+function formListener() {
+  $('#petition').submit(function(event) {
+    event.preventDefault()
+    var form = $('#petition');
+    var data = splitNames(form.find('[name="NAME"]').val());
+    data.email = form.find('[name="EMAIL"]').val();
+    data.postalCode = form.find('[name="ZIP"]').val();
+    sendData(data);
+    form.find('input').val('');
+    form.find('[type="submit"]').prop('value','Thanks!');
+    form.find('[type="submit"]').prop('disabled', true);
   });
 }
