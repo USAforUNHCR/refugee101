@@ -33,7 +33,7 @@ function prevListener(slider) {
 
 var gw = new Groundwork ({
     'api_url': 'https://api.thegroundwork.com',
-    'oauth_client_id': 'pub-un-test.vice--HoIQWQkqB5ZD1LHL95dwF5PhmRVoBAG79su2sQIZcCCqXn0OKm0X9n4h7cVNaG1ZjVyweMJr0_g5U512d2iXPQ'
+    'oauth_client_id': 'pub-un.the-crisis-is-real--BAje6upOiS_4K7LUzGD9en7jgnbUca_5NgRbUsPqXqA34r_M0UAyhg4tGBncmZRyh4M_LJkvTLEA6Xt4Ecs.Lg'
   });
 
 function sendData(data) {
@@ -54,7 +54,7 @@ function modalListener() {
     var form = $('.modal-signup');
     var data = splitNames(form.find('#name').val());
     data.email = form.find('#email').val();
-    data.source = "vice modal";
+    data.source = "crisis is real modal";
     sendData(data);
     $('#modal').modal('hide');
   })
@@ -85,7 +85,7 @@ function formListener() {
     var data = splitNames(form.find('[name="NAME"]').val());
     data.email = form.find('[name="EMAIL"]').val();
     data.postalCode = form.find('[name="ZIP"]').val();
-    data.source = "vice signup";
+    data.source = "crisis is real signup";
     sendData(data);
     form.find('input').val('');
     form.find('[type="submit"]').prop('value','Thanks!');
